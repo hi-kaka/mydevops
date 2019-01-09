@@ -1,0 +1,36 @@
+{%extends 'base.html'%}
+{%block head%}
+<style>
+    table th {
+        text-align: left;
+    }
+</style>
+{%endblock head%}
+
+{%block body%}
+<table id="model01" class="table table-bordered table-hover table-striped">
+    <thead>
+    <th colspan="8" style="background:#E3E3E3;">
+        <h4 style="background:#E3E3E3; text-align:center; font-weight:bold">自动化任务执行组信息概览</h4>
+    </th>
+    <tr>
+        <th>ID</th>
+        <th>组名</th>
+        <th>组描述</th>
+        <th>备注</th>
+        <th>组成员</th>
+    </tr>
+    </thead>
+    <tbody>
+    {%for group in page%}
+    <tr>
+        <td>{{group.id}}</td>
+        <td>{{group.group_name}}</td>
+        <td>{{group.group_detail}}</td>
+        <td>给组命名时需要将组id加在组名后面，类似xxxxx_id</td>
+        <td><a href="/list/?type=gct{{group.id}}&p=1&grpname={{group.group_name}}" target="_blank">详细</a></td>
+    </tr>
+    {%endfor%}
+    </tbody>
+</table>
+{%endblock body%}

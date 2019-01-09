@@ -1,0 +1,68 @@
+{%extends 'base.html'%}
+{%block head%}
+<style>
+    table th {
+        text-align: left;
+    }
+</style>
+{%endblock head%}
+
+{%block body%}
+    <form action="/ansible/adhocdoh/" method="post">
+        <br/>
+        <br/>
+        <br/>
+        <h1>Ansible主机模式执行:</h1>
+        <br/>
+        <label>任务的ID(请输入一串数字):
+            <input type="text" name="taskid"/>
+        </label>
+        <br/>
+        <label>执行主机(主机以逗号分割):
+            <input type="text" name="host"/>
+        </label>
+        <br/>
+        <label>主机组名(请输入主机组名):
+            <input type="text" name="groupname"/>
+        </label>
+        <br/>
+        <label>执行模块(请输入执行模块):
+            <input type="text" name="mod"/>
+        </label>
+        <br/>
+        <label>执行命令(请输入执行命令):
+            <input type="text" name="execargs"/>
+        </label>
+        <br/>
+        <br/>
+        <button type="submit">提交</button>
+    </form>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+    <form action="/ansible/adhocdog/" method="post">
+        <h1>Ansible组名模式执行:</h1>
+        <br/>
+        <label>任务的ID(请输入一串数字):
+            <input type="text" name="gtaskid"/>
+        </label>
+        <br/>
+        <label>执行组名(请输入执行组名):
+            <input type="text" name="group"/>
+        </label>
+        <br/>
+        <label>执行模块(请输入执行模块):
+            <input type="text" name="gmod"/>
+        </label>
+        <br/>
+        <label>执行命令(请输入执行命令):
+            <input type="text" name="gexecargs"/>
+        </label>
+        <br/>
+        <br/>
+        <button type="submit">提交</button>
+    </form>
+{%endblock body%}
