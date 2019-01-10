@@ -4,10 +4,12 @@ from django.shortcuts import render
 from users.utils.verify import *
 from detail.models import *
 from operations.models import *
+from detail.utils.machines import *
 
 
 @login
 def search_list(request, types):
+    sn_states = SnStates().sn_states()
     keywords = request.GET.get('keywords')
     keywords_dict = {u'报废': 0, u'已报废': 0, u'废': 0, u'坏': 0, u'测试': 1, u'测试使用': 1, u'使用': 1,
                      u'线上运行': 2, u'线上': 2, u'运行': 2, u'未使用': 3, u'下线': 3}
@@ -72,7 +74,7 @@ def search_list(request, types):
             Q(machine_name__icontains=keywords))
         return render(request, "detail/list_search.html",
                       {"title": "搜索结果", "keywords": keywords,
-                       "phy_servers": phy_servers, "vir_servers": vir_servers, "networks": networks, "others": others})
-    context = {"title": "搜索结果", "keywords": keywords, "page": page}
+                       "phy_servers": phy_servers, "vir_servers": vir_servers, "networks": networks, "others": others, 'sn_states': sn_states})
+    context = {"title": "搜索结果", "keywords": keywords, "page": page, 'sn_states': sn_states}
     return render(request, template_name=template, context=context)
 

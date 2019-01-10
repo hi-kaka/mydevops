@@ -32,7 +32,7 @@
         <td>{{phy_server.server_ip}}</td>
         <td>{{phy_server.machine_brand}}</td>
         <td>{{phy_server.system_ver}}</td>
-        <td>{{ sn_states|get_state:phy_server.conn_phy_id }}</td>
+        <td>{{ sn_states|get_state_n:phy_server.sn }}</td>
 
         {%if phy_server.vir_type == "0"%}
         <td><a href="/list/?type=ct{{phy_server.id}}&p=1" target="_blank">KVM</a></td>
@@ -50,5 +50,6 @@
     </tbody>
 </table>
 {%endblock body%}
+
 
 

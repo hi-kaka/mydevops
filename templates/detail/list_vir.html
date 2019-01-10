@@ -33,7 +33,7 @@
         <td>{{vir_server.server_type}}</td>
         <td>{{vir_server.sys_hostname}}</td>
         <td>{{vir_server.system_ver}}</td>
-        <td>{{sn_states|get_state:vir_server.conn_vir_id}}</td>
+        <td>{{sn_states|get_state_n:vir_server.sn}}</td>
         <td><a href="/detail_c/?dID={{vir_server.conn_vir.id}}" target="_blank">用户ID={{vir_server.conn_vir.id}}</a></td>
         <td><a href="/detail_v/?dID={{vir_server.id}}" target="_blank">详情</a></td>
     </tr>
@@ -42,5 +42,6 @@
 </table>
 
 {%endblock body%}
+
 
 

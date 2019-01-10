@@ -129,6 +129,7 @@ def detail(request, types):
 @login
 def classify(request):
     """分类列表"""
+    sn_states = SnStates().sn_states()
     types = request.GET.get("type")
     p = int(request.GET.get('p'))
     machines = Machines()
@@ -161,7 +162,7 @@ def classify(request):
         page = paginator_deal.page_obj(machines.filter_phy_servers(Vir_Type=''), p)
         title = "其它类型"
         template = "detail/classify_phy.html"
-    context = {'title': title, 'page': page, 'types': types}
+    context = {'title': title, 'page': page, 'types': types, 'sn_states': sn_states}
     return render(request, template_name=template, context=context)
 
 
