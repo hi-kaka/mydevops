@@ -34,7 +34,7 @@
         <td>{{phy_server.machine_brand}}</td>
         <td>{{phy_server.system_ver}}</td>
         <td class="breatde-btn" axis="{{phy_server.sn}}">{{ sn_states|get_state_n:phy_server.sn }}</td>
-        <td><a href="/list/?type=ct{{phy_server.id}}&p=1" target="_blank">{{phy_server.vir_type|revalue}}</a></td>
+        <td><a href="/list/?type=ct{{phy_server.id}}&p=1&phyname={{phy_server.server_ip}}" target="_blank">{{phy_server.vir_type|revalue}}</a></td>
         <td><a href="/detail_c/?dID={{phy_server.conn_phy.id}}" target="_blank">用户ID={{phy_server.conn_phy.id}}</a></td>
         <td><a href="/detail_p/?dID={{phy_server.id}}" target="_blank">详情</a></td>
     </tr>
