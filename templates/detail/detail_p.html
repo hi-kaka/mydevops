@@ -80,7 +80,7 @@
             <form action="/record/state_handdle/?detail_type=p" method="post" class="form-inline">
                 <input type="text" name="conn_id" value="{{item.conn_phy_id}}" style="display: none">
                 <select class="form-control" name="state">
-                    <option>{{sn_states|get_state:item.conn_phy_id}}</option>
+                    <option>{{sn_states|get_state_n:item.sn}}</option>
                     <option class="divider">-------------</option>
                     <option>下线</option>
                     <option>线上运行</option>

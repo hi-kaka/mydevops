@@ -22,12 +22,12 @@ def revalue(value):
 @register.filter
 def get_state(state, key):
     """设备状态"""
-    machines = Machines()
+    #machines = Machines()
     # if key != '':
         # sn_key = machines.filter_machines(ConnectionInfo, pk=key)[0].sn_key
         # machine = machines.filter_operations(SN=sn_key)[0]
         # state = machine.state
-    state = 2
+    #state = 2
     if state == 0:
         return '已报废'
     elif state == 1:
@@ -40,15 +40,15 @@ def get_state(state, key):
 
 @register.filter
 def get_state_n(machine_state, key):
-    machine_state == 2
+    #machine_state == 2
     # machine = Machines().filter_operations(SN=key)[0]
-    if machine_state == 0:
+    if machine_state[key] == 0:
         return '已报废'
-    elif machine_state == 1:
+    elif machine_state[key] == 1:
         return '测试使用'
-    elif machine_state == 2:
+    elif machine_state[key] == 2:
         return '线上运行'
-    elif machine_state == 3:
+    elif machine_state[key] == 3:
         return '下线'
 
 

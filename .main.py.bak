@@ -138,7 +138,9 @@ def main():
         ne.dosnmp()
 
     # '''
-    # 更新状态表，用户信息表，还未用到，还没有创建app operations
+    # 更新状态表，用户信息表
+    # 作为演示时，此处有个bug，手动插入的PhysicalServerInfo记录在ConnectionInfo中没有对应记录
+    # MachineOperationsInfo计数时不会把这条记录算在内，所以手动插入的PhysicalServerInfo记录不能获取状态
     # '''
     # c_sn_lst = [item.sn_key for item in ConnectionInfo.objects.all()]
     # o_sn_lst = [item.sn_key for item in OtherMachineInfo.objects.all()]
