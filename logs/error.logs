@@ -1674,3 +1674,6 @@ Traceback (most recent call last):
   File "/data/devops/imoocc/apps/detail/templatetags/filters.py", line 45, in get_state_n
     if machine_state[key] == 0:
 TypeError: string indices must be integers, not unicode
+[W 20190110 15:14:47 base:170] Not Found: /favicon.ico
+[W 20190111 12:21:45 base:170] Not Found: /favicon.ico
+[W 20190111 13:27:28 base:170] Not Found: /favicon.ico
