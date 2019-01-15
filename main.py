@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 #########################################################################
-# Author:Jeson
-# Email:jeson@imoocc.com
 
 import datetime
 import os
