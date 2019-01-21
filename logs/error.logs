@@ -1677,3 +1677,6 @@ TypeError: string indices must be integers, not unicode
 [W 20190110 15:14:47 base:170] Not Found: /favicon.ico
 [W 20190111 12:21:45 base:170] Not Found: /favicon.ico
 [W 20190111 13:27:28 base:170] Not Found: /favicon.ico
+[W 20190116 17:35:30 base:170] Not Found: /favicon.ico
+[W 20190116 17:35:31 base:170] Not Found: /favicon.ico
+[W 20190121 17:29:16 base:170] Not Found: /favicon.ico

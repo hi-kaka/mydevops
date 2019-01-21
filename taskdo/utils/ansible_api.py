@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 # import os,sys
-# PROJECT_ROOT = '/Users/renren/Work/imoocc/code/iops'
 # sys.path.insert(0,PROJECT_ROOT)
 # os.environ["DJANGO_SETTINGS_MODULE"] = 'admin.settings.settings'
 # import django
