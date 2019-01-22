@@ -3,9 +3,6 @@
 #########################################################################
 # File Name: nmap_all_server.py
 # Program function:自动探测所有服务器，发现端口扫描、探测。
-# Author:Jeson
-# mail:iaskjob@163.com
-# Created Time: 四  6/16 11:13:39 2016
 # pip install paramiko python-nmap
 #========================================================================
 import nmap

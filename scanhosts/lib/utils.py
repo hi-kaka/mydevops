@@ -3,9 +3,6 @@
 #########################################################################
 # File Name:
 # Program function:所有
-# Author:Jeson
-# mail:iaskjob@163.com
-# Created Time: 四  6/16 11:13:39 2016
 # pip install paramiko python-nmap
 #========================================================================
 

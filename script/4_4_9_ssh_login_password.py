@@ -3,9 +3,6 @@
 #########################################################################
 # File Name: ssh_pexpect.py
 # Program function:
-# Author:Jeson
-# mail:jeson@imoocc.com
-# Created Time: Sun Dec  3 10:05:05 2017
 #========================================================================
 import pexpect
 

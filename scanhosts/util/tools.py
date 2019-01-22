@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 #########################################################################
-# Author:Jeson
-# mail:iaskjob@163.com
-# Created Time: 四  6/16 11:13:39 2016
 #########################################################################
 
 from django.core.mail import send_mail
