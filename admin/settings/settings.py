@@ -92,9 +92,9 @@ WSGI_APPLICATION = 'admin.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'imoocc',
-        'USER': 'imoocc',
-        'PASSWORD': 'imoocccom',
+        'NAME': 'mydevops',
+        'USER': os.environ.get('MYSQL_USER', 'root'),
+        'PASSWORD': os.environ.get('MYSQL_PASSWORD'),
         'HOST': os.environ.get('MYSQL_HOST', '127.0.0.1'),
         'PORT': '',
         'OPTIONS': {},
