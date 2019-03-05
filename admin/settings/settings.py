@@ -92,10 +92,10 @@ WSGI_APPLICATION = 'admin.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mydevops',
-        'USER': os.environ.get('MYSQL_USER', 'root'),
-        'PASSWORD': os.environ.get('MYSQL_PASSWORD'),
-        'HOST': os.environ.get('MYSQL_HOST', '127.0.0.1'),
+        'NAME': 'imoocc',
+        'USER': 'imoocc',
+        'PASSWORD': 'imoocccom',
+        'HOST': '192.168.147.128',
         'PORT': '',
         'OPTIONS': {},
         'init_command': 'SET storage_engine=INNODB,'
@@ -159,9 +159,9 @@ LOGGING = {
 }
 
 # Mongo DB
-MONGO_HOST = os.environ.get('MONGO_HOST', '127.0.0.1')
+MONGO_HOST = '192.168.147.128'
 MONGO_PORT = '27017'
 
 # Redis Con
-REDSI_KWARGS_LPUSH = {"host":os.environ.get('REDIS_HOST', '127.0.0.1'),'port':6379,'db':os.environ.get('REDIS_DB', 3)}
+REDSI_KWARGS_LPUSH = {"host":'192.168.147.129','port':6379,'db':3}
 REDSI_LPUSH_POOL = None
